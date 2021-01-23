@@ -1,0 +1,245 @@
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .testString{
+        color: green;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .home-nav-bar{
+        position: absolute;
+        height: 50px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        background: linear-gradient(180deg, #35CD8B 34.05%, rgba(255, 255, 255, 0) 80.57%), rgba(255, 255, 255, 0.5);
+        border: 2px solid #35CD8B;
+    }
+    .syringe-vector{
+        position: absolute;
+        alt: "syringe";
+        width: 35px;
+        height: 35px;
+        left: 20px;
+        top: 7px;
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    .vacctrack-title{
+        position: absolute;
+        width: 180px;
+        height: 32px;
+        left: 65px;
+        top: 6px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 39px;
+    }
+    .about-us-button{
+        position: absolute;
+        width: 140px;
+        height: 33px;
+        right: 24px;
+        top: 12px;
+
+        background: #FFFFFF;
+        font-family: 'Public Sans', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 34px;
+        outline: none;
+        transition: 0.3s;
+    }
+    .inventory-button{
+        position: absolute;
+        width: 140px;
+        height: 33px;
+        right: 175px;
+        top: 12px;
+        
+        background: #FFFFFF;
+        font-family: 'Public Sans', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 34px;
+        outline: none;
+        transition: 0.3s;
+    }
+    .about-us-button:hover{
+        background: #2A875E;
+        color: white;
+    }
+    .inventory-button:hover{
+        background: #2A875E;
+        color: white;
+    } 
+    /*FIRST FRONTLINER BACKGROUND*/
+    .front-liner-image{
+        position: absolute;
+        height: 374px;
+        width: 100%;
+        left: 0%;
+        right: 0%;
+        top: 53px;
+
+        background-image: url('Images/AP_20106846275700.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin: auto;
+        opacity: 0.55;
+    }
+    /*FIRST CONIC*/
+    .first-cone{
+        position: absolute;
+        height: 465px;
+        width: 100%;
+        left: 0%;
+        right: 0%;
+        top: 320px;
+
+        background-image: url('Images/Vector 1.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+    }
+    /*PRIME TEXT FIRST*/
+    .first-prime-text{
+        position: absolute;
+        width: 944px;
+        height: 66px;
+        left: calc(50% - 944px/2 + 16.5px);
+        top: 140px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: white;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+        z-index: 1;
+    }
+    .shadow{
+        position: absolute;
+        width: 944px;
+        height: 66px;
+        left: calc(50% - 944px/2 + 12.5px);
+        top: 144px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+    }
+    /*SUB TEXT FIRST*/
+    .first-sub-text{
+        position: absolute;
+        width: 414px;
+        height: 38px;
+        left: calc(50% - 414px/2 + 14.5px);
+        top: 220px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: white;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 35px;
+        z-index: 1;
+    }
+    .sub-text-shadow{
+        position: absolute; 
+        width: 414px;
+        height: 38px;
+        left: calc(50% - 414px/2 + 11.5px);
+        top: 222px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    /*THREE RECTANGLES*/
+    .middle-portion{
+        position: relative;
+        top: -5px;
+        transition: top ease 0.5s;
+    }
+    .middle-green-box{
+        position: absolute;
+        width: 372px;
+        height: 785px;
+        left: calc(50% - 372px/2 - 13.5px);
+        top: 390px;
+
+        background: #258A5E ;
+        border-radius: 75px;
+    }
+    .middle-box{
+        position: absolute;
+        width: 372px;
+        height: 785px;
+        left: calc(50% - 372px/2 + 13.5px);
+        top: 373px;
+
+        background: #FFFFFF;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 75px;
+    }
+    .middle-portion:hover{
+        top: -20px;
+    }
+    .city-vector{
+        position: absolute;
+        width: 38px;
+        height: 32px;
+        left: calc(50% - 65px/2 + 14.5px);
+        top: 15px;
+        alt: "city";
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    .population-count-text{
+        position: absolute;
+        width: 189px;
+        height: 32px;
+        left: calc(50% - 220px/2 + 14px);
+        top: 50px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .metro-manila-population{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 255px/2 + 14.5px);
+        top: 80px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
