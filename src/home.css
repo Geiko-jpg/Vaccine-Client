@@ -24,7 +24,8 @@
         height: 35px;
         left: 20px;
         top: 7px;
-        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%)
     }
     .vacctrack-title{
         position: absolute;
@@ -129,6 +130,21 @@
         line-height: 70px;
         z-index: 1;
     }
+    .changing-color-text{
+        animation: changing-color-text 8s infinite;
+        animation-timing-function: ease-in-out;
+    }
+        /*ANIMATING COVID-FREE CHANGING COLOR*/
+        @keyframes changing-color-text {
+            33%{
+                color: white;   
+                animation-timing-function: ease-in-out;
+            }
+            33%{
+                color: #35CD8B;
+                animation-timing-function: ease-in-out;
+            }
+        }
     .shadow{
         position: absolute;
         width: 944px;
@@ -175,6 +191,7 @@
     }
 
     /*THREE RECTANGLES*/
+    /*MIDDLE BOX*/
     .middle-portion{
         position: relative;
         top: -5px;
@@ -183,17 +200,18 @@
     .middle-green-box{
         position: absolute;
         width: 372px;
-        height: 785px;
+        height: 750px;
         left: calc(50% - 372px/2 - 13.5px);
         top: 390px;
 
         background: #258A5E ;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 75px;
     }
     .middle-box{
         position: absolute;
         width: 372px;
-        height: 785px;
+        height: 750px;
         left: calc(50% - 372px/2 + 13.5px);
         top: 373px;
 
@@ -241,5 +259,350 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 26px;
+    }
+    .population-num{
+        position: absolute;
+        width: 320px;
+        height: 34px;
+        left: calc(50% - 275px/2 + 13.5px);
+        top: 300px;
+
+        font-family: 'PT Mono', monospace;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 34px;
+    }
+    .inhabitants-middle{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 135px/2 + 13.5px);
+        top: 340px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .cities-note{
+        position: absolute;
+        width: 279px;
+        height: 48px;
+        left: calc(50% - 305px/2 + 11px);
+        top: 590px;
+
+        font-family: 'PT Sans', sans-serif;
+        font-style: normal;
+        color: black;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
+    }
+    .cities-button{
+        position: absolute;
+        width: 250px;
+        height: 40px;
+        left: calc(50% - 270px/2 + 11px);
+        top: 655px;
+
+        background: white;
+        font-family: 'PT Sans', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        border: 3px solid #258A5E;
+        box-sizing: border-box;
+        border-radius: 35px;
+        outline: none;
+        transition: 0.3s;
+    }
+    .cities-button:hover{
+        background: #258A5E;
+        color: white;
+    }
+
+    /*RIGHT BOX - Unvaccinated Count*/
+    .right-portion{
+        position: relative;
+        top: -5px;
+        transition: top ease 0.5s;
+    }
+    .right-bg-box{
+        position: absolute;
+        width: 372px;
+        height: 667px; 
+        left: calc(50% - 360px/2 + 424.5px);
+        top: 362px;
+
+        background: #258A5E;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 75px;
+    }
+    .right-top-box{
+        position: absolute;
+        width: 372px;
+        height: 667px;
+        left: calc(50% - 360px/2 + 451.5px);
+        top: 344px;
+
+        background: #FFFFFF;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 75px;
+    }
+    .right-portion:hover{
+        top: -20px;
+    }
+    .biohazard-vector{
+        position: absolute;
+        width: 33px;
+        height: 32px;
+        left: calc(50% - 100px/2 + 35px);
+        top: 15px;
+        alt: "biohazard";
+
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    .unvaccinated-head-text{
+        position: absolute;
+        width: 218px;
+        height: 32px;
+        left: calc(50% - 275px/2 + 30px);
+        top: 50px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .unvaccinated-sub-text{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 275px/2 + 30px);
+        top: 79px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .unvaccinated-count-text{ 
+        position: absolute;
+        width: 320px;
+        height: 34px;
+        left: calc(50% - 310px/2 + 30.5px);
+        top: 260px;
+
+        font-family: 'PT Mono', monospace;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 34px;
+    }
+    .inhabitants-rightbox{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 160px/2 + 30.5px);
+        top: 300px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .datadisplayed-right{
+        position: absolute;
+        width: 297px;
+        height: 57px;
+        top: 510px;
+        left: calc(50% - 328px/2 + 14.5px);
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        line-height: 26px;
+    }
+    .question-right{
+        position: absolute;
+        width: 40px;
+        height: 42px;
+        left: calc(50% - 70px/2 + 14.5px);
+        top: 580px;
+        alt: "inquiry";
+        
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    /*LEFT BOX -> Vaccinated Count*/
+    .left-portion{
+        position: relative;
+        top: -19px;
+        transition: top ease 0.5s;
+    }
+    .left-bg-box{
+        position: absolute;
+        width: 372px;
+        height: 667px;
+        left: calc(50% - 372px/2 - 460.5px);
+        top: 376px;
+
+        background: #258A5E;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 75px;
+    }
+    .left-top-box{
+        position: absolute;
+        width: 372px;
+        height: 667px;
+        left: calc(50% - 372px/2 - 434.5px);
+        top: 358px;
+
+        background: #FFFFFF;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 75px;
+    }
+    .left-portion:hover{
+        top: -34px;
+    }
+    .chart-vector{
+        position: absolute;
+        width: 28px;
+        height: 32px;
+        left: calc(50% - 130px/2 + 50.5px);
+        top: 15px;
+        alt: "chart";
+
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    .vaccinated-head-text{
+        position: absolute;
+        width: 199px;
+        height: 32px;
+        left: calc(50% - 260px/2 + 30.5px);
+        top: 45px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .vaccinated-sub-text{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 284px/2 + 30.5px);
+        top: 75px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .vaccinated-count-text{
+        position: absolute;
+        width: 320px;
+        height: 34px;
+        left: calc(50% - 310px/2 + 30.5px);
+        top: 260px;
+
+        font-family: 'PT Mono', monospace;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 34px;
+    }
+    .inhabitants-left-box{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 160px/2 + 30.5px);
+        top: 300px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .data-displayed-left{
+        position: absolute;
+        width: 297px;
+        height: 57px;
+        top: 510px;
+        left: calc(50% - 328px/2 + 14.5px);
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        line-height: 26px;
+    }
+    .question-mark-left{
+        position: absolute;
+        width: 40px;
+        height: 42px;
+        left: calc(50% - 70px/2 + 14.5px);
+        top: 580px;
+        alt: "inquiry";
+        
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+
+    /*INPUT PATIENT SECTION*/
+    .file-vector{
+        position: absolute;
+        width: 30px;
+        height: 32px;
+        right: 30px;
+        top: 68px;
+        alt: "file";
+
+        filter: invert(75%) sepia(57%) saturate(581%) hue-rotate(92deg) brightness(94%) contrast(96%) drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+    }
+    .input-patient-button{
+        position: absolute;
+        width: 207px;
+        height: 33px;
+        top: 68px;
+        right: 69px;
+
+        background: #FFFFFF;
+        font-family: 'Public Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 34px;
+        outline: none;
+        transition: 0.3s;
+    }
+    .input-patient-button:hover{
+        background: #2A875E;
+        color: white;
     }
 }
