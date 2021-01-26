@@ -93,8 +93,9 @@
         top: 53px;
 
         background-image: url('Images/AP_20106846275700.jpg');
+        background-attachment: fixed;
         background-size: cover;
-        background-position: center center;
+        background-position: bottom center;
         background-repeat: no-repeat;
         margin: auto;
         opacity: 0.55;
