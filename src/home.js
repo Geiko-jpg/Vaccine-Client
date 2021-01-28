@@ -1,7 +1,10 @@
 import React from 'react';
 import axios from 'axios'; // Used for REST Api (server fetching e.g. GET, POST)
-import history from './history.js'; // Used for navigation
+import history from './history.js'; // Used for navigation (pushing to other pages)
 import './home.css';
+// - - >  SLIDESHOW IMAGES
+import Vaccine1 from './Images/vacc1.jpeg';
+import Vaccine3 from './Images/vac33.jpg';
 //- - > IMAGES / VECTORS
 import { ReactComponent as Syringe } from './Images/syringe-solid.svg';
 import { ReactComponent as City } from './Images/city-solid.svg';
@@ -9,6 +12,8 @@ import { ReactComponent as Hazard } from './Images/biohazard-solid.svg';
 import { ReactComponent as Question } from './Images/question-circle-regular.svg';
 import { ReactComponent as Chart } from './Images/chart-line-solid.svg';
 import { ReactComponent as File } from './Images/file-medical-solid.svg';
+import { ReactComponent as Virus } from './Images/virus-solid.svg'; 
+import { ReactComponent as Comment } from './Images/comment-medical-solid.svg';
 
 // - - > On startup setup for the vaccine app
 var InitializeHomeFonts = () => { // Importing fonts from googleapis (very cool method instead of downloading fonts)
@@ -20,6 +25,7 @@ var InitializeHomeFonts = () => { // Importing fonts from googleapis (very cool 
             <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;700&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet"></link>
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
         </head>
     );
 }
@@ -130,6 +136,45 @@ var VaccinatedMain = () => {
     );
 }
 
+// - - > SLIDESHOW IMAGE PORTION
+var Slideshow = () => {
+    return(
+        <div>
+            <img id="first-image" className="slide-show-image" src={Vaccine1} alt="vaccine 1" />
+            <img id="second-image" className="slide-show-image w3-animate-fading" src={Vaccine3} alt="vaccine 3" />
+            <span className="slide-show-text">A reliable and precise vaccination tracker for patients, frontliners, and doctors everywhere. We aim to provide accurate to numbers in support to eradicating pandemics.</span>
+            <Virus className="virus-vector" />
+            <hr className="second-green-line" />
+        </div>
+    );  
+}
+
+// - - > SEARCH A PATIENT DIVISION
+var SearchPatientBG = () => {
+    return(
+        <div className="bg-search-box">
+            <div className="bg-search-box-overlay">
+                <span className="age-label">Age:</span>
+                <span className="city-residence-label">City of Residence:</span>
+                <span className="date-vacc">Date of Vaccination:</span>
+                <span  className="vacc-brand-label">Vaccine Brand:</span>
+                <span className="vacc-code-label">Vaccine Code:</span>
+            </div>
+        </div>
+    );  
+}
+
+var SearchPatientHead = () => {
+    return(
+        <div>
+            <span className="search-patient-label">Search A Patient</span>
+            <span className="search-patient-label-border">Search A Patient</span>
+            <Comment className="comment-vector" />
+            <span className="search-patient-subtext">Enter your patient code to commence search</span>
+        </div>
+    );
+}
+
 export default class HomePage extends React.Component{
     // - - > ON CLIENT STARTUP
     constructor(props){
@@ -139,11 +184,14 @@ export default class HomePage extends React.Component{
             mmPopulation: 1000000000,
             unvaccinatedCount: 1000000000,
             vaccinatedCount: 1000000000,
+            patientSearch: '',
         }
         // - - > EVENT HANDLING VARIABLES
         this.handleAboutUs = this.handleAboutUs.bind(this);
         this.handleInventory = this.handleInventory.bind(this);
         this.handleInputPatient = this.handleInputPatient.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSearchField = this.handleSearchField.bind(this);
     }
     componentDidMount(){
         document.title = "VaccTrack.ph";
@@ -167,7 +215,20 @@ export default class HomePage extends React.Component{
     }
 
     handleInputPatient(event){ // Push to Input Patient Page
-        alert("CLICKED INPUT PATIENTS!");
+        history.push({
+            pathname: '/login',
+            search: '?query=loginPage',
+        });
+    }
+
+    handleSearchField(event){
+        this.setState({patientSearch: event.target.value});
+    }
+
+    handleSubmit(event){ // Search Patient Button handler
+        alert(`Search Patient -> ${this.state.patientSearch}`);   
+        this.setState({patientSearch: ''});
+             
     }
 
     render(){
@@ -205,6 +266,19 @@ export default class HomePage extends React.Component{
                     <VaccinatedBox />
                     <VaccinatedMain />
                 </div>
+                {/*First line break - Home Page*/}
+                <hr className="first-green-line" />
+                <Slideshow />
+                {/*SEARCH A PATIENT Division*/}
+                <SearchPatientHead />
+                <form onSubmit={this.handleSubmit} method='POST'>
+                    <div className="search-field">
+                        <input type="text" placeholder="Patient Code" value={this.state.patientSearch} onChange={this.handleSearchField} />
+                    </div>
+                    <input type="submit" value="Submit" className="search-button" />
+                </form>
+                <SearchPatientBG />
+
                 <p className="testString">{this.state.apiResponse}</p>
             </div>
         );

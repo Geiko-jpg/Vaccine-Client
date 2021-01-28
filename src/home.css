@@ -1,3 +1,4 @@
+/*Smaller Screen Query*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
     * {
         margin: 0 !important;
@@ -31,7 +32,7 @@
         position: absolute;
         width: 180px;
         height: 32px;
-        left: 65px;
+        left: 60px;
         top: 6px;
 
         font-family: 'PT Sans', sans-serif;
@@ -91,6 +92,618 @@
         left: 0%;
         right: 0%;
         top: 53px;
+
+        background-image: url('Images/AP_20106846275700.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        margin: auto;
+        opacity: 0.55;
+    }
+    /*FIRST CONIC*/
+    .first-cone{
+        position: absolute;
+        height: 465px;
+        width: 100%;
+        left: 0%;
+        right: 0%;
+        top: 320px;
+
+        background-image: url('Images/Vector 1.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+    }
+    /*PRIME TEXT FIRST*/
+    .first-prime-text{
+        position: absolute;
+        width: 944px;
+        height: 66px;
+        left: calc(50% - 944px/2 + 16.5px);
+        top: 140px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: white;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+        z-index: 1;
+    }
+    .changing-color-text{
+        animation: changing-color-text 8s infinite;
+        animation-timing-function: ease-in-out;
+    }
+        /*ANIMATING COVID-FREE CHANGING COLOR*/
+        @keyframes changing-color-text {
+            33%{
+                color: white;   
+                animation-timing-function: ease-in-out;
+            }
+            33%{
+                color: #35CD8B;
+                animation-timing-function: ease-in-out;
+            }
+        }
+    .shadow{
+        position: absolute;
+        width: 944px;
+        height: 66px;
+        left: calc(50% - 944px/2 + 12.5px);
+        top: 144px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+    }
+    /*SUB TEXT FIRST*/
+    .first-sub-text{
+        position: absolute;
+        width: 414px;
+        height: 38px;
+        left: calc(50% - 414px/2 + 14.5px);
+        top: 220px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: white;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 35px;
+        z-index: 1;
+    }
+    .sub-text-shadow{
+        position: absolute; 
+        width: 414px;
+        height: 38px;
+        left: calc(50% - 414px/2 + 11.5px);
+        top: 222px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    /*THREE RECTANGLES*/
+    /*MIDDLE BOX*/
+    .middle-portion{
+        position: relative;
+        top: -5px;
+        transition: top ease 0.5s;
+    }
+    .middle-green-box{
+        position: absolute;
+        width: 372px;
+        height: 750px;
+        left: calc(50% - 372px/2 - 13.5px);
+        top: 390px;
+
+        background: #258A5E ;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 75px;
+    }
+    .middle-box{
+        position: absolute;
+        width: 372px;
+        height: 750px;
+        left: calc(50% - 372px/2 + 13.5px);
+        top: 373px;
+
+        background: #FFFFFF;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 75px;
+    }
+    .middle-portion:hover{
+        top: -20px;
+    }
+    .city-vector{
+        position: absolute;
+        width: 38px;
+        height: 32px;
+        left: calc(50% - 65px/2 + 14.5px);
+        top: 15px;
+        alt: "city";
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    .population-count-text{
+        position: absolute;
+        width: 189px;
+        height: 32px;
+        left: calc(50% - 220px/2 + 14px);
+        top: 50px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .metro-manila-population{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 255px/2 + 14.5px);
+        top: 80px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .population-num{
+        position: absolute;
+        width: 320px;
+        height: 34px;
+        left: calc(50% - 275px/2 + 13.5px);
+        top: 300px;
+
+        font-family: 'PT Mono', monospace;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 34px;
+    }
+    .inhabitants-middle{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 135px/2 + 13.5px);
+        top: 340px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .cities-note{
+        position: absolute;
+        width: 279px;
+        height: 48px;
+        left: calc(50% - 305px/2 + 11px);
+        top: 590px;
+
+        font-family: 'PT Sans', sans-serif;
+        font-style: normal;
+        color: black;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
+    }
+    .cities-button{
+        position: absolute;
+        width: 250px;
+        height: 40px;
+        left: calc(50% - 270px/2 + 11px);
+        top: 655px;
+
+        background: white;
+        font-family: 'PT Sans', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        border: 3px solid #258A5E;
+        box-sizing: border-box;
+        border-radius: 35px;
+        outline: none;
+        transition: 0.3s;
+    }
+    .cities-button:hover{
+        background: #258A5E;
+        color: white;
+    }
+
+    /*RIGHT BOX - Unvaccinated Count*/
+    .right-portion{
+        position: relative;
+        top: -5px;
+        transition: top ease 0.5s;
+    }
+    .right-bg-box{
+        position: absolute;
+        width: 372px;
+        height: 667px; 
+        left: calc(50% - 365px/2 + 424.5px);
+        top: 362px;
+
+        background: #258A5E;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 75px;
+    }
+    .right-top-box{
+        position: absolute;
+        width: 372px;
+        height: 667px;
+        left: calc(50% - 360px/2 + 451.5px);
+        top: 344px;
+
+        background: #FFFFFF;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 75px;
+    }
+    .right-portion:hover{
+        top: -20px;
+    }
+    .biohazard-vector{
+        position: absolute;
+        width: 33px;
+        height: 32px;
+        left: calc(50% - 100px/2 + 35px);
+        top: 15px;
+        alt: "biohazard";
+
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    .unvaccinated-head-text{
+        position: absolute;
+        width: 218px;
+        height: 32px;
+        left: calc(50% - 275px/2 + 30px);
+        top: 50px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .unvaccinated-sub-text{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 275px/2 + 30px);
+        top: 79px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .unvaccinated-count-text{ 
+        position: absolute;
+        width: 320px;
+        height: 34px;
+        left: calc(50% - 310px/2 + 30.5px);
+        top: 260px;
+
+        font-family: 'PT Mono', monospace;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 34px;
+    }
+    .inhabitants-rightbox{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 160px/2 + 30.5px);
+        top: 300px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .datadisplayed-right{
+        position: absolute;
+        width: 297px;
+        height: 57px;
+        top: 510px;
+        left: calc(50% - 328px/2 + 14.5px);
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        line-height: 26px;
+    }
+    .question-right{
+        position: absolute;
+        width: 40px;
+        height: 42px;
+        left: calc(50% - 70px/2 + 14.5px);
+        top: 580px;
+        alt: "inquiry";
+        
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    /*LEFT BOX -> Vaccinated Count*/
+    .left-portion{
+        position: relative;
+        top: -19px;
+        transition: top ease 0.5s;
+    }
+    .left-bg-box{
+        position: absolute;
+        width: 372px;
+        height: 667px;
+        left: calc(50% - 372px/2 - 460.5px);
+        top: 376px;
+
+        background: #258A5E;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 75px;
+    }
+    .left-top-box{
+        position: absolute;
+        width: 372px;
+        height: 667px;
+        left: calc(50% - 372px/2 - 434.5px);
+        top: 358px;
+
+        background: #FFFFFF;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 75px;
+    }
+    .left-portion:hover{
+        top: -34px;
+    }
+    .chart-vector{
+        position: absolute;
+        width: 28px;
+        height: 32px;
+        left: calc(50% - 130px/2 + 50.5px);
+        top: 15px;
+        alt: "chart";
+
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    .vaccinated-head-text{
+        position: absolute;
+        width: 199px;
+        height: 32px;
+        left: calc(50% - 260px/2 + 30.5px);
+        top: 45px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .vaccinated-sub-text{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 284px/2 + 30.5px);
+        top: 75px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .vaccinated-count-text{
+        position: absolute;
+        width: 320px;
+        height: 34px;
+        left: calc(50% - 310px/2 + 30.5px);
+        top: 260px;
+
+        font-family: 'PT Mono', monospace;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 34px;
+    }
+    .inhabitants-left-box{
+        position: absolute;
+        width: 220px;
+        height: 26px;
+        left: calc(50% - 160px/2 + 30.5px);
+        top: 300px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .data-displayed-left{
+        position: absolute;
+        width: 297px;
+        height: 57px;
+        top: 510px;
+        left: calc(50% - 328px/2 + 14.5px);
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        line-height: 26px;
+    }
+    .question-mark-left{
+        position: absolute;
+        width: 40px;
+        height: 42px;
+        left: calc(50% - 70px/2 + 14.5px);
+        top: 580px;
+        alt: "inquiry";
+        
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+
+    /*INPUT PATIENT SECTION*/
+    .file-vector{
+        position: absolute;
+        width: 30px;
+        height: 32px;
+        right: 30px;
+        top: 68px;
+        alt: "file";
+
+        filter: invert(75%) sepia(57%) saturate(581%) hue-rotate(92deg) brightness(94%) contrast(96%) drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+    }
+    .input-patient-button{
+        position: absolute;
+        width: 207px;
+        height: 33px;
+        top: 68px;
+        right: 69px;
+
+        background: #FFFFFF;
+        font-family: 'Public Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 34px;
+        outline: none;
+        transition: 0.3s;
+    }
+    .input-patient-button:hover{
+        background: #2A875E;
+        color: white;
+    }
+}
+
+
+/*Regular Copy -> Maximizing to 1920px*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1920px){
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .testString{
+        color: green;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .home-nav-bar{
+        position: absolute;
+        height: 50px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        background: linear-gradient(180deg, #35CD8B 34.05%, rgba(255, 255, 255, 0) 80.57%), rgba(255, 255, 255, 0.5);
+        border: 2px solid #35CD8B;
+    }
+    .syringe-vector{
+        position: absolute;
+        alt: "syringe";
+        width: 35px;
+        height: 35px;
+        left: 20px;
+        top: 7px;
+
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%)
+    }
+    .vacctrack-title{
+        position: absolute;
+        width: 180px;
+        height: 32px;
+        left: 60px;
+        top: 6px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 39px;
+    }
+    .about-us-button{
+        position: absolute;
+        width: 140px;
+        height: 33px;
+        right: 24px;
+        top: 8px;
+
+        background: #FFFFFF;
+        font-family: 'Public Sans', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 34px;
+        outline: none;
+        transition: 0.3s;
+    }
+    .inventory-button{
+        position: absolute;
+        width: 140px;
+        height: 33px;
+        right: 175px;
+        top: 8px;
+        
+        background: #FFFFFF;
+        font-family: 'Public Sans', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        border: 3px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 34px;
+        outline: none;
+        transition: 0.3s;
+    }
+    .about-us-button:hover{
+        background: #2A875E;
+        color: white;
+    }
+    .inventory-button:hover{
+        background: #2A875E;
+        color: white;
+    } 
+    /*FIRST FRONTLINER BACKGROUND*/
+    .front-liner-image{
+        position: absolute;
+        height: 374px;
+        width: 100%;
+        left: 0%;
+        right: 0%;
+        top: 50px;
 
         background-image: url('Images/AP_20106846275700.jpg');
         background-attachment: fixed;
@@ -578,7 +1191,7 @@
         width: 30px;
         height: 32px;
         right: 30px;
-        top: 68px;
+        top: 60px;
         alt: "file";
 
         filter: invert(75%) sepia(57%) saturate(581%) hue-rotate(92deg) brightness(94%) contrast(96%) drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
@@ -587,7 +1200,7 @@
         position: absolute;
         width: 207px;
         height: 33px;
-        top: 68px;
+        top: 60px;
         right: 69px;
 
         background: #FFFFFF;
@@ -606,4 +1219,283 @@
         background: #2A875E;
         color: white;
     }
+    .first-green-line{
+        position: absolute;
+        left: 6.62%;
+        right: 7.71%;
+        top: 1220px;
+        height: 3px;
+
+        border-width: 0;
+        background-color: #258A5E;
+    }
+    /*FADING SLIDESHOW IMAGES*/
+    .slide-show-image{
+        position: absolute;
+        width: 500px;
+        left: 0%;
+        right: 0%;
+        height: 555px;
+        top: 1300px;
+        left: calc(50% - 520px/2 + 370.5px);
+
+        filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25)); 
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 81px;
+        background-position: top center;
+    }
+    #first-image{
+        position: absolute;
+    }
+    #second-image{
+        position: absolute;
+    }
+    .slide-show-text{
+        position: absolute;
+        width: 650px;
+        height: 180px;
+        left: calc(50% - 650px/2 - 280.5px);
+        top: 1450px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 60px;
+        text-align: center;
+    }
+    .virus-vector{
+        position: absolute;
+        width: 60px;
+        height: 55px;
+        left: calc(50% - 60px/2 - 620.5px);
+        top: 1390px;
+
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    .second-green-line{
+        position: absolute;
+        left: 6.62%;
+        right: 7.71%;
+        top: 1920px;
+        height: 3px;
+
+        border-width: 0;
+        background-color: #258A5E;
+    }
+    /*SEARCH A PATIENT PORTION*/
+    .search-patient-label{
+        position: absolute;
+        width: 469px;
+        height: 78px;
+        left: calc(50% - 469px/2 + 4px);
+        top: 2000px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: #2A875E;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 78px;
+        text-align: center;
+        z-index: 1;
+    }
+    .search-patient-label-border{
+        position: absolute;
+        width: 469px;
+        height: 78px;
+        left: calc(50% - 417px/2 + 4px);
+        top: 1994px;
+        
+        font-family: 'PT Sans', sans-serif;
+        color: white;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        text-shadow: 1px 0 0 #000000, -1px 0 0 #000000, 0 1px 0 #000000, 0 -1px 0 #000000, 1px 1px #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000;
+    }
+    .comment-vector{
+        position: absolute;
+        width: 62px;
+        height: 51px;
+        left: calc(50% - 62px/2 + 250.5px);
+        top: 1970px;
+
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+        animation: moveUpDown 1.5s linear infinite; 
+    }
+        @keyframes moveUpDown{
+            0%, 100%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-10px);
+                
+            }
+        }
+    .search-patient-subtext{
+        position: absolute;
+        width: 380px;
+        height: 48px;
+        left: calc(50% - 380px/2 + 9.5px);
+        top: 2080px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 39px;
+        text-align: center;
+    }
+    input[type="text"]{
+        font-family: 'PT Sans', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        border: none;
+        height: 29px;
+        width: 770px;
+        border-color: transparent;
+        position: absolute;
+        top: 1px;
+        left: 10px;
+        outline: none;
+    }
+    .search-field{
+        position: absolute;
+        width: 802px;
+        height: 39px;
+        left: calc(50% - 850px/2 - 78.5px);
+        top: 2200px;
+        
+        background: #FFFFFF;
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+    .search-button{
+        position: absolute;
+        width: 142px;
+        height: 39px;
+        left: calc(50% - 170px/2 + 425.5px);
+        top: 2200px;
+
+        background-color: #FFFFFF;
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 20px;
+        font-family: 'Public Sans', sans-serif;
+        color: black;
+        font-weight: 600;
+        font-size: 20px;
+        outline: none;
+        transition: 0.3s;
+    }
+    .search-button:hover{
+        background-color: #2A875E;
+        color: white;
+    }
+    .bg-search-box{
+        position: absolute;
+        width: 1224px;
+        height: 575px;
+        left: calc(50% - 1285px/2 + 11.5px);
+        top: 2300px;
+
+        background: #2A875E;
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 61px;
+    }
+    .bg-search-box-overlay{
+        position: absolute;
+        width: 1224px;
+        height: 575px;
+        left: calc(50% - 1210px/2 + 11.5px);
+        top: -20px;
+
+        background: white;
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 61px;
+    }
+    /*BOX CONTENTS*/
+    .age-label{
+        position: absolute;
+        width: 76px;
+        height: 52px;
+        left: calc(50% - 110px/2 - 503.5px);
+        top: 25px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: #2A875E;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+        text-align: center;
+    }
+    .city-residence-label{
+        position: absolute;
+        width: 300px;
+        height: 52px;
+        left: calc(50% - 110px/2 - 503.5px);
+        top: 120px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: #2A875E;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+        text-align: center;
+    }
+    .date-vacc{
+        position: absolute;
+        width: 340px;
+        height: 52px;
+        left: calc(50% - 110px/2 - 503.5px);
+        top: 230px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: #2A875E;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+        text-align: center;
+    }
+    .vacc-brand-label{
+        position: absolute;
+        width: 251px;
+        height: 52px;
+        left: calc(50% - 110px/2 - 503.5px);
+        top: 350px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: #2A875E;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+        text-align: center;
+    }
+    .vacc-code-label{
+        position: absolute;
+        width: 234px;
+        height: 52px;
+        left: calc(50% - 110px/2 - 503.5px);
+        top: 470px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: #2A875E;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+        text-align: center;        
+    }
 }
+

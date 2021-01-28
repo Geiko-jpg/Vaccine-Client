@@ -1,0 +1,39 @@
+@media screen and (min-device-width: 1200px) and (max-device-width: 1920px){
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .login-nav-bar{
+        position: absolute;
+        height: 50px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        background: linear-gradient(180deg, #35CD8B 34.05%, rgba(255, 255, 255, 0) 80.57%), rgba(255, 255, 255, 0.5);
+        border: 2px solid #35CD8B;
+    }
+    .syringe-login-vector{
+        position: absolute;
+        alt: "syringe";
+        width: 35px;
+        height: 35px;
+        left: 20px;
+        top: 7px;
+
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%)
+    }
+    .vacctrack-title-login{
+        position: absolute;
+        width: 180px;
+        height: 32px;
+        left: 60px;
+        top: 6px;
+
+        font-family: 'PT Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 39px;        
+    }
+}
