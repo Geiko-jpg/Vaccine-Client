@@ -1300,21 +1300,8 @@
         font-size: 60px;
         line-height: 78px;
         text-align: center;
-        z-index: 1;
-    }
-    .search-patient-label-border{
-        position: absolute;
-        width: 469px;
-        height: 78px;
-        left: calc(50% - 417px/2 + 4px);
-        top: 1994px;
-        
-        font-family: 'PT Sans', sans-serif;
-        color: white;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 60px;
         text-shadow: 1px 0 0 #000000, -1px 0 0 #000000, 0 1px 0 #000000, 0 -1px 0 #000000, 1px 1px #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000;
+        z-index: 1;
     }
     .comment-vector{
         position: absolute;
@@ -1496,6 +1483,330 @@
         font-size: 40px;
         line-height: 52px;
         text-align: center;        
+    }
+    .display-data-format{
+        text-align: center;
+        font-family: 'PT Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+    }
+    #age-box-field{
+        position: absolute;
+        width: 129px;
+        height: 32px;
+        left: calc(50% - 190px/2 - 370px);
+        top: 38px;
+        
+        background: #FFFFFF;
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+    #city-res-field{
+        position: absolute;
+        width: 241px;
+        height: 32px;
+        left: calc(50% - 190px/2 - 150px);
+        top: 132px;
+
+        background: #FFFFFF;
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+    #vacc-date-field{
+        position: absolute;
+        width: 241px;
+        height: 32px;
+        left: calc(50% - 241px/2 - 82px);
+        top: 243px;
+
+        background: #FFFFFF;
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 20px;        
+    }
+    #vacc-brand-field{
+        position: absolute;
+        width: 241px;
+        height: 32px;
+        left: calc(50% - 241px/2 - 170px);
+        top: 363px;
+
+        background: #FFFFFF;
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+    #vacc-code-label{
+        position: absolute;
+        width: 241px;
+        height: 32px;
+        left: calc(50% - 241px/2 - 185px);
+        top: 483px;
+
+        background: #FFFFFF;
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+    .vertical-green-line{
+        position: absolute;
+        height: 520px;
+        width: 0px;
+        left: calc(50% - 500px/2 + 360.5px);
+        top: 25px;
+
+        border-left: 3px solid #258A5E;
+    }
+    .patient-indicator-label{
+        position: absolute;
+        width: 381px;
+        height: 29px;
+        left: calc(50% - 381px/2 + 370px);
+        top: 25px;
+
+        font-family: 'PT Sans', sans-serif;
+        text-shadow: 1px 0 0 #000000, -1px 0 0 #000000, 0 1px 0 #000000, 0 -1px 0 #000000, 1px 1px #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 58px;
+        text-align: center;
+        color: #2A875E;
+    }
+    #indicator{
+        position: absolute;
+        width: 172px;
+        height: 98px;
+        left: calc(50% - 172px/2 + 307.5px);
+        top: 2374px;
+        background: white;
+        border-radius: 25px;
+        border: 2px solid #2A875E;
+        z-index: 1;
+    }
+    .unvacc-palette{
+        position: absolute;
+        width: 112px;
+        height: 24px;
+        left: calc(50% - 172px/2 + 500.5px);
+        top: 92px;
+
+        background: #A02B2B;
+        border-radius: 38px;
+    }
+    .vacc-palette{
+        position: absolute;
+        width: 112px;
+        height: 24px;
+        left: calc(50% - 172px/2 + 500.5px);
+        top: 122px;
+
+        background: #56CCF2;
+        border-radius: 38px;
+    }
+    .not-found-palette{
+        position: absolute;
+        width: 112px;
+        height: 24px;
+        left: calc(50% - 172px/2 + 500.5px);
+        top: 152px;
+
+        background: #9a9a9a;
+        border-radius: 38px;
+    }
+    .patient-status-box{
+        position: absolute;
+        width: 230px;
+        height: 28px;
+        left: calc(50% - 225px/2 + 382px);
+        top: 200px;
+
+        background: #FFFFFF;
+        border: 2px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    .medical-note-vector{
+        position: absolute;
+        width: 13px;
+        height: 17px;
+        top: 3px;
+        left: calc(50% - 210px/2 + 0px);
+
+        filter: invert(40%) sepia(74%) saturate(368%) hue-rotate(101deg) brightness(94%) contrast(91%);
+    }
+    .status-label{
+        position: absolute;
+        width: 51px;
+        height: 22px;
+        left: calc(50% - 195px/2 + 10px);
+        top: 1px;
+
+        font-family: 'PT Sans', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 22px;
+        text-align: center;
+        color: #2A875E;
+    }
+    /*Description Portion*/
+    .description-box{
+        position: absolute;
+        width: 358px;
+        height: 300px;
+        left: calc(50% - 388px/2 + 392.5px);
+        top: 240px;
+
+        background: white;
+        border: 2px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    .description-label{
+        position: absolute;
+        width: 381px;
+        height: 29px;
+        left: calc(50% - 500px/2 + 65px);
+        top: 2px;
+
+        font-family: 'PT Sans', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 39px;
+        text-align: center;
+        color: #2A875E;
+        text-shadow: 1px 0 0 #000000, -1px 0 0 #000000, 0 1px 0 #000000, 0 -1px 0 #000000, 1px 1px #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000;
+    }
+    .description-text-format{
+        position: absolute;
+        width: 350px;
+        height: 148px;
+        left: calc(50% - 450px/2 + 50.5px);
+        top: 55px;
+
+        font-family: 'PT Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 26px;
+        text-align: center;
+        color: black;
+    }   
+    .reset-button{
+        position: absolute;
+        width: 225px;
+        height: 35px;
+        left: calc(50% - 218px/2 + 375.5px);
+        top: 2770px;
+
+        font-family: 'Public Sans', sans-serif;
+        background: white;
+        border: 4px solid #2A875E;
+        box-sizing: border-box;
+        border-radius: 20px;
+        color: black;
+        font-weight: 600;
+        font-size: 20px;
+        outline: none;
+        transition: 0.3s;
+    }
+    .reset-button:hover{
+        background: #2A875E;
+        color: white;
+    }
+    .search-patient-disclaimer{
+        position: absolute;
+        width: 479px;
+        height: 48px;
+        left: calc(50% - 479px/2 - 360px);
+        top: 570px;
+
+        font-family: 'PT Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 32px;
+        text-align: center;
+        color: black;
+    }
+    .second-cone{
+        position: absolute;
+        height: 465px;
+        width: 100%;
+        left: 0%;
+        right: 0%;
+        top: 2800px;
+
+        background-image: url('Images/Vector 1.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+        transform: rotate(-180deg);
+        z-index: -1;
+    }
+    .footer-image{
+        position: absolute;
+        height: 400px;
+        left: 0%;
+        width: 100%;
+        right: 0%;
+        bottom: 0px;
+        top: 3150px;
+
+        background-image: url('Images/07143653-photo-sm-distributes-ppes-and-medical-supplies-to-over-50-hospitals-nationwide_cover_2000x1500.jfif');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        margin: auto;
+        opacity: 0.55;
+        z-index: -2;
+    }
+    .footer-main-text{
+        position: absolute;
+        width: 1197px;
+        height: 66px;
+        left: calc(50% - 1197px/2 + 50px);
+        top: 3300px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: white;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+        z-index: 1;
+    }
+    .footer-shadow-text{
+        position: absolute;
+        width: 1197px;
+        height: 66px;
+        left: calc(50% - 1197px/2 + 47px);
+        top: 3303px;
+
+        font-family: 'Public Sans', sans-serif;
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .footer-bar{
+        position: absolute;
+        height: 50px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 3500px;
+
+        border: 2px solid #35CD8B;
+        background: linear-gradient(180deg, #FFFFFF 22.39%, rgba(255, 255, 255, 0) 100%), #258A5E;
     }
 }
 

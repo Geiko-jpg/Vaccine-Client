@@ -14,6 +14,7 @@ import { ReactComponent as Chart } from './Images/chart-line-solid.svg';
 import { ReactComponent as File } from './Images/file-medical-solid.svg';
 import { ReactComponent as Virus } from './Images/virus-solid.svg'; 
 import { ReactComponent as Comment } from './Images/comment-medical-solid.svg';
+import { ReactComponent as Note } from './Images/notes-medical-solid.svg';
 
 // - - > On startup setup for the vaccine app
 var InitializeHomeFonts = () => { // Importing fonts from googleapis (very cool method instead of downloading fonts)
@@ -23,7 +24,7 @@ var InitializeHomeFonts = () => { // Importing fonts from googleapis (very cool 
             <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet"></link>
-            <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;700&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css 2?family=Public+Sans:wght@300;700&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet"></link>
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
         </head>
@@ -150,16 +151,68 @@ var Slideshow = () => {
 }
 
 // - - > SEARCH A PATIENT DIVISION
+var patientAge, patientCity, vaccDate, vaccCode, vaccBrand, patientFound, vaccStat, status;
+var foundPatient;
 var SearchPatientBG = () => {
+    let dynamicDescription;
+    if(patientFound){
+        if(vaccStat === "Vaccinated"){
+            status = "Vaccinated";
+            dynamicDescription = "Patient is vaccinated. Please wait for the vaccination to take into effect (approx. 72 hours upon injection). Still follow COVID-19 safety protocols to maximize immunity.";
+        }else{
+            status = "Unvaccinated";
+            dynamicDescription = "Patient found to be unvaccinated. Please follow COVID-19 safety protocols and try to avail vaccination as soon as possible.";
+        }
+    }else{
+        status = "Not Found";
+        dynamicDescription = "Searching patient lead to database error. Individual is found to be unknown. Please avail the vaccination as soon as possible and remember to strictly comply with the COVID-19 protocols.";
+    }
+
     return(
         <div className="bg-search-box">
             <div className="bg-search-box-overlay">
+                {/*Box Left Side*/}
                 <span className="age-label">Age:</span>
                 <span className="city-residence-label">City of Residence:</span>
                 <span className="date-vacc">Date of Vaccination:</span>
                 <span  className="vacc-brand-label">Vaccine Brand:</span>
                 <span className="vacc-code-label">Vaccine Code:</span>
+                <div id="age-box-field">
+                    <p className="display-data-format">{patientAge}yrs old</p>
+                </div>
+                <div id="city-res-field">
+                    <p className="display-data-format">{patientCity}</p>
+                </div>
+                <div id="vacc-date-field">
+                    <p className="display-data-format">{vaccDate}</p>
+                </div>
+                <div id="vacc-brand-field">
+                    <p className="display-data-format">{vaccBrand}</p>
+                </div>
+                <div id="vacc-code-label">
+                    <p className="display-data-format">{vaccCode}</p>
+                </div>
+                {/*Box Right Side*/}
+                <div className="vertical-green-line"></div>
+                <span className="patient-indicator-label">Patient Indicator:</span>
+                <div className="unvacc-palette"></div>
+                <div className="vacc-palette"></div>
+                <div className="not-found-palette"></div>
+                <div className="patient-status-box">
+                    <Note className="medical-note-vector" />
+                    <span className="status-label">Status:</span>
+                    <p className="display-data-format"
+                        style={{position: "absolute", left: 105}} >
+                        {status}
+                    </p>
+                </div>
+                {/*Description Box*/}
+                <div className="description-box">
+                    <span className="description-label">Description:</span>
+                    <span className="description-text-format">{dynamicDescription}</span>
+                </div>
             </div>
+            <span className="search-patient-disclaimer">*Patient's data is safely stored for privacy*</span>
         </div>
     );  
 }
@@ -168,13 +221,51 @@ var SearchPatientHead = () => {
     return(
         <div>
             <span className="search-patient-label">Search A Patient</span>
-            <span className="search-patient-label-border">Search A Patient</span>
             <Comment className="comment-vector" />
             <span className="search-patient-subtext">Enter your patient code to commence search</span>
         </div>
     );
 }
 
+// - - > May use if Necessary (Still for Testing)
+class PatientDetail{ // Patient Details Class
+    constructor(city, date, age, code, brand, stat){
+        this.city = city;
+        this.date = date;
+        this.age = age;
+        this.code = code;
+        this.brand = brand;
+        this.stat = stat;
+    }
+    returnCity(){ // Return City value class method
+        return this.city;
+    }
+}
+
+// - - > Components below Patient Search Segment
+var SecondConic = () => {
+    return(
+        <div className="second-cone"></div>
+    );
+}
+
+var FrontLinerFooter = () => {
+    return(
+        <div>
+            <div className="footer-image"></div>
+            <span className="footer-main-text">More info about the creators in About Us</span>
+            <span className="footer-shadow-text">More info about the creators in About Us</span>
+        </div>
+    );
+}
+
+var FooterBar = () => {
+    return(
+        <div className="footer-bar"></div>
+    );
+}
+
+var vaccinationStatus;
 export default class HomePage extends React.Component{
     // - - > ON CLIENT STARTUP
     constructor(props){
@@ -185,6 +276,13 @@ export default class HomePage extends React.Component{
             unvaccinatedCount: 1000000000,
             vaccinatedCount: 1000000000,
             patientSearch: '',
+            patientCity: '',
+            vaccDate: '',
+            patientAge: 0,
+            vaccCode: '',
+            vaccBrand: '',
+            patientFound: false,
+            vaccStat: ''
         }
         // - - > EVENT HANDLING VARIABLES
         this.handleAboutUs = this.handleAboutUs.bind(this);
@@ -192,6 +290,9 @@ export default class HomePage extends React.Component{
         this.handleInputPatient = this.handleInputPatient.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSearchField = this.handleSearchField.bind(this);
+        this.handleReset = this.handleReset.bind(this);
+        // - - > Ref for Changing Color
+        this.indicator = React.createRef(); // Used instead of document.getElementByID or .getElementByClass for ReactJS
     }
     componentDidMount(){
         document.title = "VaccTrack.ph";
@@ -226,13 +327,62 @@ export default class HomePage extends React.Component{
     }
 
     handleSubmit(event){ // Search Patient Button handler
-        alert(`Search Patient -> ${this.state.patientSearch}`);   
-        this.setState({patientSearch: ''});
-             
+        alert(`Search Patient -> ${this.state.patientSearch}`); 
+        // - - > FOR TESTING ONLY! (Removed upon Dynamic Implementation)
+        if(this.state.patientSearch !== ''){
+            this.setState({patientFound: true});
+
+            if(this.state.patientSearch === "Kyle Degrano"){
+                this.setState({patientCity: 'Quezon City', vaccDate: '01-28-2021', vaccCode: '01XX2021', vaccBrand: 'Sinovac', patientAge: 20});
+                vaccinationStatus = "Unvaccinated";
+                this.setState({vaccStat: vaccinationStatus});    
+            }else{
+                this.setState({patientCity: 'Makati City', vaccDate: '01-30-2021', vaccCode: '01XX2021', vaccBrand: 'Pfizer', patientAge: 15});
+                vaccinationStatus = "Vaccinated";
+                this.setState({vaccStat: vaccinationStatus});
+            }  
+
+            if(vaccinationStatus === 'Vaccinated'){
+                this.indicator.current.style.background = "#56CCF2";
+            }else if(vaccinationStatus === "Unvaccinated"){
+                this.indicator.current.style.background = "#A02B2B";
+            }
+        }else{
+            this.setState({patientFound: false});
+            this.indicator.current.style.background = "#9A9A9A";
+        }
+
+        event.preventDefault();
+    }
+
+    handleReset(event){ // Reset Button to Reset Inputs
+        alert('Reset Button Clicked!');
+        this.setState({patientSearch: '', patientCity: '', vaccDate: '', patientAge: 0, vaccCode: '', vaccBrand: '', vaccStat: '', patientFound: false});
+        this.indicator.current.style.background = "white";
+    }
+
+    // - - > Data Initializer
+    dataInitiate(){
+        // - - > PASS Data TO GLOBAL VARIABLE
+        foundPatient = new PatientDetail(this.state.patientCity, this.state.vaccDate, this.state.patientAge,
+        this.state.vaccCode, this.state.vaccBrand, this.state.vaccStat);
+        // - - > Utilize the Class (TEST)
+        patientCity = foundPatient.returnCity();
+        patientAge = foundPatient.age
+        vaccDate = foundPatient.date;
+        vaccCode = foundPatient.code;
+        vaccBrand = foundPatient.brand;
+        patientFound = this.state.patientFound;
+        vaccStat = foundPatient.stat;
+        // - - > Initialize Counter
+        mmPopCount = this.state.mmPopulation;
+        unvaccinatedNum = this.state.unvaccinatedCount;
+        vaccinatedNum = this.state.vaccinatedCount;
     }
 
     render(){
-        // - - > PASS THE COUNT TO GLOBAL VARIABLE
+        // - - > Calling Initiate Function
+        this.dataInitiate();
         return(
             <div>
                 {/*INITIALIZE FONTS PORTION -> Head*/}
@@ -247,11 +397,7 @@ export default class HomePage extends React.Component{
                 {/*Input Patient Section*/}
                 <File className="file-vector" />
                 <button className="input-patient-button" onClick={() => this.handleInputPatient()}>Input Patient</button>
-                {/*INITIALIZE COUNTER VALUES*/}
-                    {mmPopCount = this.state.mmPopulation}
-                    {unvaccinatedNum = this.state.unvaccinatedCount}
-                    {vaccinatedNum = this.state.vaccinatedCount}
-                {/*THREE BOXES -> MIDDLE*/}
+                {/*THREE BOXES -> Manila Population*/}
                 <div className="middle-portion">
                     <PopCountBox />
                     <PopMain />
@@ -271,13 +417,21 @@ export default class HomePage extends React.Component{
                 <Slideshow />
                 {/*SEARCH A PATIENT Division*/}
                 <SearchPatientHead />
-                <form onSubmit={this.handleSubmit} method='POST'>
+                {/*method='POST'*/}
+                <form onSubmit={this.handleSubmit}>
                     <div className="search-field">
                         <input type="text" placeholder="Patient Code" value={this.state.patientSearch} onChange={this.handleSearchField} />
                     </div>
                     <input type="submit" value="Submit" className="search-button" />
                 </form>
+                {/*Search Box Values*/}
+                <div id="indicator" ref={this.indicator}></div>
                 <SearchPatientBG />
+                <button className="reset-button" onClick={() => this.handleReset()}>Reset</button>
+                {/*After Search box */}
+                <SecondConic />
+                <FrontLinerFooter />
+                <FooterBar />
 
                 <p className="testString">{this.state.apiResponse}</p>
             </div>
