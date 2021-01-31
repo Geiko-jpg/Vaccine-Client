@@ -645,7 +645,7 @@
         width: 180px;
         height: 32px;
         left: 60px;
-        top: 6px;
+        top: 5px;
 
         font-family: 'PT Sans', sans-serif;
         color: black;
@@ -669,7 +669,7 @@
         box-sizing: border-box;
         border-radius: 34px;
         outline: none;
-        transition: 0.3s;
+        transition: 0.35s ease-in-out;
     }
     .inventory-button{
         position: absolute;
@@ -686,7 +686,7 @@
         box-sizing: border-box;
         border-radius: 34px;
         outline: none;
-        transition: 0.3s;
+        transition: 0.35s ease-in-out; 
     }
     .about-us-button:hover{
         background: #2A875E;
@@ -933,7 +933,7 @@
         box-sizing: border-box;
         border-radius: 35px;
         outline: none;
-        transition: 0.3s;
+        transition: 0.35s ease-in-out;
     }
     .cities-button:hover{
         background: #258A5E;
@@ -1213,7 +1213,7 @@
         box-sizing: border-box;
         border-radius: 34px;
         outline: none;
-        transition: 0.3s;
+        transition: 0.35s ease-in-out;
     }
     .input-patient-button:hover{
         background: #2A875E;
@@ -1378,7 +1378,7 @@
         font-weight: 600;
         font-size: 20px;
         outline: none;
-        transition: 0.3s;
+        transition: 0.35s ease-in-out;
     }
     .search-button:hover{
         background-color: #2A875E;
@@ -1713,7 +1713,7 @@
         font-weight: 600;
         font-size: 20px;
         outline: none;
-        transition: 0.3s;
+        transition: 0.35s ease-in-out;
     }
     .reset-button:hover{
         background: #2A875E;
@@ -1772,7 +1772,7 @@
         position: absolute;
         width: 1197px;
         height: 66px;
-        left: calc(50% - 1197px/2 + 50px);
+        left: calc(50% - 1240px/2 + 50px);
         top: 3300px;
 
         font-family: 'Public Sans', sans-serif;
@@ -1787,7 +1787,7 @@
         position: absolute;
         width: 1197px;
         height: 66px;
-        left: calc(50% - 1197px/2 + 47px);
+        left: calc(50% - 1240px/2 + 47px);
         top: 3303px;
 
         font-family: 'Public Sans', sans-serif;

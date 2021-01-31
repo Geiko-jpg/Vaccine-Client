@@ -72,7 +72,6 @@ function citiesPage(){ // !NOTE: Push to Cities page
 var PopCountBox = () => { // Green Background
     return(
         <div className="middle-green-box"></div>
-        
     );
 }
 
@@ -432,8 +431,6 @@ export default class HomePage extends React.Component{
                 <SecondConic />
                 <FrontLinerFooter />
                 <FooterBar />
-
-                <p className="testString">{this.state.apiResponse}</p>
             </div>
         );
     }
